@@ -1,0 +1,49 @@
+{
+  "name": "switchboard",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "agent:research:audit-runtime": "node --experimental-strip-types scripts/research-agent/audit-runtime.mts",
+    "agent:research:sync": "node --experimental-strip-types scripts/research-agent/sync.mts",
+    "agent:research:verify": "node --experimental-strip-types scripts/research-agent/verify.mts",
+    "agent:research:simulate": "node --experimental-strip-types scripts/research-agent/simulate.mts",
+    "agent:research:smoke-live": "node --experimental-strip-types scripts/research-agent/smoke-live.mts",
+    "agent:research:recover": "node --experimental-strip-types scripts/research-agent/recover.mts --dry-run",
+    "agent:research:recover:apply": "node --experimental-strip-types scripts/research-agent/recover.mts --apply"
+  },
+  "dependencies": {
+    "@elevenlabs/elevenlabs-js": "^2.39.0",
+    "@elevenlabs/react": "^0.14.3",
+    "@radix-ui/react-dialog": "^1.1.15",
+    "@radix-ui/react-scroll-area": "^1.2.10",
+    "@radix-ui/react-slot": "^1.2.4",
+    "@supabase/ssr": "^0.9.0",
+    "@supabase/supabase-js": "^2.99.3",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "firecrawl": "^4.16.0",
+    "framer-motion": "^12.38.0",
+    "lucide-react": "^0.577.0",
+    "next": "16.2.0",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "tailwind-merge": "^3.5.0",
+    "twilio": "^5.13.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.0",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
