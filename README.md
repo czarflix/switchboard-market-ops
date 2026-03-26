@@ -49,7 +49,7 @@ Do not use live telephony without permission. Follow Twilio policy, consent and 
 
 - Demo: [https://switchboard.czarflix.me](https://switchboard.czarflix.me)
 - The hosted demo is a gated review build with the calls stage kept policy-safe.
-- Judge access code will be published here after submissions close at 5:00 p.m. UK time on 26 March 2026.
+- Judge access code: `firecrawlxelevenlabs`
 
 ## Local Development
 
