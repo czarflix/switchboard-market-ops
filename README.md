@@ -49,7 +49,7 @@ Do not use live telephony without permission. Follow Twilio policy, consent and 
 
 - Demo: [https://switchboard.czarflix.me](https://switchboard.czarflix.me)
 - The hosted demo is a gated review build with the calls stage kept policy-safe.
-Access is configured through private deployment environment settings; no access code is published here.\n
+Access is configured through private deployment environment settings; no access code is published here.
 ## Local Development
 
 ```bash
