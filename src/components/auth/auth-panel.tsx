@@ -196,7 +196,8 @@ export function AuthPanel({
                 {mode === "signin"
                   ? "Sign in to access the operator."
                   : judgeAccessRepoUrl
-Access is configured through private deployment environment settings; no access code is published here.\n                    : "Create an account with the preview access code."}
+                    ? "Use the private preview access flow configured by the deployment owner."
+                    : "Create an account with the preview access code."}
               </p>
             </div>
 

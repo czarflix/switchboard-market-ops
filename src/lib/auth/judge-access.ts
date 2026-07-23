@@ -57,7 +57,9 @@ export function readJudgeAccessPresentationConfig(
   const judgeAccessPublished = now.getTime() >= publishAtUnixMs;
   const judgeAccessRepoMessage = judgeAccessRepoUrl
     ? judgeAccessPublished
-Access is configured through private deployment environment settings; no access code is published here.\nAccess is configured through private deployment environment settings; no access code is published here.\n    : "";
+      ? "Preview access is configured through private deployment settings."
+      : `Preview access details are managed privately until ${DEFAULT_JUDGE_ACCESS_PUBLISH_LABEL}.`
+    : "";
 
   return {
     judgeAccessRepoUrl,
