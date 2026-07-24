@@ -1,6 +1,6 @@
 # Evaluation plan
 
-The repository includes deterministic audit and simulation scripts under `scripts/research-agent/`. They are intended to validate state transitions and recovery behavior without enabling live external actions.
+The repository includes deterministic validation and simulation scripts under `scripts/research-agent/`. They check state transitions and recovery behavior without enabling live external actions.
 
 ## Required fixture classes
 

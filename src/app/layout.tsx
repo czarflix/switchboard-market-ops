@@ -17,7 +17,7 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title: "Switchboard | AI sourcing for messy local markets",
+  title: "Switchboard | Local sourcing, one clear next step",
   description:
     "Switchboard uses ElevenLabs for live intake and Firecrawl for market evidence, then carries the workflow through outreach to one next-step-ready recommendation.",
 };

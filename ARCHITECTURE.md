@@ -12,7 +12,7 @@ flowchart LR
     B --> M[Market workspace]
     M --> DB
     B --> C[Calls workspace]
-    C --> SIM[Policy-safe simulation]
+    C --> SIM[Simulated outreach]
     C -. optional private deployment .-> TEL[Telephony provider]
     M --> W[Winner and handoff]
 ```
@@ -22,7 +22,7 @@ flowchart LR
 - Browser code receives only public configuration such as Supabase URL and publishable keys.
 - Server routes own provider credentials and validate authenticated users before accessing user-owned rows.
 - Research evidence is stored with source metadata so a recommendation can be reviewed before an operator acts.
-- Hosted review builds keep outbound calling off. Telephony is an explicitly enabled private-deployment capability, not a portfolio demo default.
+- Hosted demos disable outbound calling. Telephony is available only in private deployments where an operator explicitly enables it.
 - External actions should remain mocked or dry-run until an operator confirms the exact action and recipient.
 
 ## Main flow

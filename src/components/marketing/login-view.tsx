@@ -9,14 +9,14 @@ export function LoginView({
   signupEnabled = true,
   initialError = "",
   forceSignOutUnauthorized = false,
-  judgeAccessRepoMessage = "",
-  judgeAccessRepoUrl = "",
+  previewAccessRepoMessage = "",
+  previewAccessRepoUrl = "",
 }: {
   signupEnabled?: boolean;
   initialError?: string;
   forceSignOutUnauthorized?: boolean;
-  judgeAccessRepoMessage?: string;
-  judgeAccessRepoUrl?: string;
+  previewAccessRepoMessage?: string;
+  previewAccessRepoUrl?: string;
 }) {
   return (
     <MarketingShell>
@@ -32,8 +32,8 @@ export function LoginView({
             signupEnabled={signupEnabled}
             initialError={initialError}
             forceSignOutUnauthorized={forceSignOutUnauthorized}
-            judgeAccessRepoMessage={judgeAccessRepoMessage}
-            judgeAccessRepoUrl={judgeAccessRepoUrl}
+            previewAccessRepoMessage={previewAccessRepoMessage}
+            previewAccessRepoUrl={previewAccessRepoUrl}
           />
         </motion.div>
       </div>

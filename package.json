@@ -9,6 +9,8 @@
     "start": "next start",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
+    "check:public-links": "node scripts/check-public-links.mjs",
+    "test:preview-access": "node --experimental-strip-types --test src/lib/auth/preview-access.test.mts",
     "agent:research:audit-runtime": "node --experimental-strip-types scripts/research-agent/audit-runtime.mts",
     "agent:research:sync": "node --experimental-strip-types scripts/research-agent/sync.mts",
     "agent:research:verify": "node --experimental-strip-types scripts/research-agent/verify.mts",

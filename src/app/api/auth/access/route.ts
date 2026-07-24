@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-import { ensureJudgeAccess } from "@/lib/auth/judge-access";
+import { ensurePreviewAccess } from "@/lib/auth/preview-access";
 import { createClient } from "@/lib/supabase/server";
 
 export async function GET() {
@@ -8,7 +8,7 @@ export async function GET() {
   const {
     data: { user },
   } = await supabase.auth.getUser();
-  const authorizedUser = await ensureJudgeAccess(user);
+  const authorizedUser = await ensurePreviewAccess(user);
 
   if (!authorizedUser) {
     return NextResponse.json(

@@ -5,9 +5,9 @@ import {
   resolveServerResearchAgentEnv,
 } from "@/lib/research/runtime-env";
 import {
-  readJudgeAccessConfig,
-  readJudgeAccessPresentationConfig,
-} from "@/lib/auth/judge-access";
+  readPreviewAccessConfig,
+  readPreviewAccessPresentationConfig,
+} from "@/lib/auth/preview-access";
 
 function readBooleanEnv(value: string | undefined, fallback = false) {
   if (typeof value !== "string") {
@@ -29,8 +29,8 @@ function readBooleanEnv(value: string | undefined, fallback = false) {
 
 export function getServerEnv() {
   const researchAgentEnv = resolveServerResearchAgentEnv(process.env);
-  const judgeAccess = readJudgeAccessConfig(process.env);
-  const judgeAccessPresentation = readJudgeAccessPresentationConfig(process.env);
+  const previewAccess = readPreviewAccessConfig(process.env);
+  const previewAccessPresentation = readPreviewAccessPresentationConfig(process.env);
 
   return {
     firecrawlApiKey: process.env.FIRECRAWL_API_KEY,
@@ -66,12 +66,12 @@ export function getServerEnv() {
     testCallNumber: process.env.TEST_CALL_NUMBER?.trim(),
     resendApiKey: process.env.RESEND_API_KEY,
     resendFromEmail: process.env.RESEND_FROM_EMAIL,
-    judgeAccessCode: judgeAccess.judgeAccessCode,
-    judgeSignupEnabled: judgeAccess.judgeSignupEnabled,
-    judgeAccessRepoUrl: judgeAccessPresentation.judgeAccessRepoUrl,
-    judgeAccessPublishAt: judgeAccessPresentation.judgeAccessPublishAt,
-    judgeAccessPublished: judgeAccessPresentation.judgeAccessPublished,
-    judgeAccessRepoMessage: judgeAccessPresentation.judgeAccessRepoMessage,
+    previewAccessCode: previewAccess.previewAccessCode,
+    previewSignupEnabled: previewAccess.previewSignupEnabled,
+    previewAccessRepoUrl: previewAccessPresentation.previewAccessRepoUrl,
+    previewAccessPublishAt: previewAccessPresentation.previewAccessPublishAt,
+    previewAccessPublished: previewAccessPresentation.previewAccessPublished,
+    previewAccessRepoMessage: previewAccessPresentation.previewAccessRepoMessage,
   };
 }
 
