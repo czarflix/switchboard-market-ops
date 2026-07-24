@@ -1,0 +1,29 @@
+packages:
+  - .
+
+overrides:
+  '@babel/core': 7.29.6
+  axios: 1.18.0
+  esbuild: 0.28.1
+  fast-uri: 3.1.4
+  fast-uri@3.1.0: 3.1.4
+  follow-redirects: 1.16.0
+  form-data: 4.0.6
+  js-yaml: 4.3.0
+  picomatch: 4.0.4
+  postcss: 8.5.10
+  postcss@8.5.8: 8.5.10
+  qs: 6.15.2
+  sharp: 0.35.0
+  ws: 8.21.0
+  ws@8.17.1: 8.21.0
+  ws@8.19.0: 8.21.0
+  '@elevenlabs/elevenlabs-js>ws': 8.21.0
+  '@supabase/realtime-js>ws': 8.21.0
+  '@tailwindcss/postcss>postcss': 8.5.10
+  'minimatch@3.1.5>brace-expansion': 1.1.16
+  'minimatch@10.2.4>brace-expansion': 5.0.7
+
+allowBuilds:
+  sharp: true
+  unrs-resolver: true
