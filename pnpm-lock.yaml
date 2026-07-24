@@ -14,8 +14,8 @@ overrides:
   form-data: 4.0.6
   js-yaml: 4.3.0
   picomatch: 4.0.4
-  postcss: 8.5.10
-  postcss@8.5.8: 8.5.10
+  postcss: 8.5.12
+  postcss@8.5.8: 8.5.12
   qs: 6.15.2
   sharp: 0.35.0
   ws: 8.21.0
@@ -23,7 +23,7 @@ overrides:
   ws@8.19.0: 8.21.0
   '@elevenlabs/elevenlabs-js>ws': 8.21.0
   '@supabase/realtime-js>ws': 8.21.0
-  '@tailwindcss/postcss>postcss': 8.5.10
+  '@tailwindcss/postcss>postcss': 8.5.12
   minimatch@3.1.5>brace-expansion: 1.1.16
   minimatch@10.2.4>brace-expansion: 5.0.7
 
@@ -2170,8 +2170,8 @@ packages:
     resolution: {integrity: sha512-/+5VFTchJDoVj3bhoqi6UeymcD00DAwb1nJwamzPvHEszJ4FpF6SNNbUbOS8yI56qHzdV8eK0qEfOSiodkTdxg==}
     engines: {node: '>= 0.4'}
 
-  postcss@8.5.10:
-    resolution: {integrity: sha512-pMMHxBOZKFU6HgAZ4eyGnwXF/EvPGGqUr0MnZ5+99485wwW41kW91A4LOGxSHhgugZmSChL5AlElNdwlNgcnLQ==}
+  postcss@8.5.12:
+    resolution: {integrity: sha512-W62t/Se6rA0Az3DfCL0AqJwXuKwBeYg6nOaIgzP+xZ7N5BFCI7DYi1qs6ygUYT6rvfi6t9k65UMLJC+PHZpDAA==}
     engines: {node: ^10 || ^12 || >=14}
 
   prelude-ls@1.2.1:
@@ -3299,7 +3299,7 @@ snapshots:
       '@alloc/quick-lru': 5.2.0
       '@tailwindcss/node': 4.2.2
       '@tailwindcss/oxide': 4.2.2
-      postcss: 8.5.10
+      postcss: 8.5.12
       tailwindcss: 4.2.2
 
   '@tybys/wasm-util@0.10.1':
@@ -4627,7 +4627,7 @@ snapshots:
       '@swc/helpers': 0.5.15
       baseline-browser-mapping: 2.10.9
       caniuse-lite: 1.0.30001780
-      postcss: 8.5.10
+      postcss: 8.5.12
       react: 19.2.4
       react-dom: 19.2.4(react@19.2.4)
       styled-jsx: 5.1.6(@babel/core@7.29.6(supports-color@7.2.0))(react@19.2.4)
@@ -4739,7 +4739,7 @@ snapshots:
 
   possible-typed-array-names@1.1.0: {}
 
-  postcss@8.5.10:
+  postcss@8.5.12:
     dependencies:
       nanoid: 3.3.11
       picocolors: 1.1.1
