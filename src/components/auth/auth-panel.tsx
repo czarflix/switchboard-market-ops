@@ -36,14 +36,14 @@ export function AuthPanel({
   signupEnabled = true,
   initialError = "",
   forceSignOutUnauthorized = false,
-  judgeAccessRepoMessage = "",
-  judgeAccessRepoUrl = "",
+  previewAccessRepoMessage = "",
+  previewAccessRepoUrl = "",
 }: {
   signupEnabled?: boolean;
   initialError?: string;
   forceSignOutUnauthorized?: boolean;
-  judgeAccessRepoMessage?: string;
-  judgeAccessRepoUrl?: string;
+  previewAccessRepoMessage?: string;
+  previewAccessRepoUrl?: string;
 }) {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -195,7 +195,7 @@ export function AuthPanel({
               <p className="mt-1.5 text-[13px]" style={{ color: "var(--muted)" }}>
                 {mode === "signin"
                   ? "Sign in to access the operator."
-                  : judgeAccessRepoUrl
+                  : previewAccessRepoUrl
                     ? "Use the private preview access flow configured by the deployment owner."
                     : "Create an account with the preview access code."}
               </p>
@@ -276,11 +276,11 @@ export function AuthPanel({
                       caretColor: "var(--accent)",
                     } as CSSProperties}
                   />
-                  {judgeAccessRepoUrl && judgeAccessRepoMessage ? (
+                  {previewAccessRepoUrl && previewAccessRepoMessage ? (
                     <span className="text-[12px] leading-5" style={{ color: "var(--muted)" }}>
-                      {judgeAccessRepoMessage}{" "}
+                      {previewAccessRepoMessage}{" "}
                       <a
-                        href={judgeAccessRepoUrl}
+                        href={previewAccessRepoUrl}
                         target="_blank"
                         rel="noreferrer"
                         className="font-semibold underline underline-offset-4"

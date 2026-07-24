@@ -22,7 +22,7 @@ export async function POST(request: Request) {
   try {
     const env = getServerEnv();
 
-    if (!env.judgeSignupEnabled || !env.judgeAccessCode) {
+    if (!env.previewSignupEnabled || !env.previewAccessCode) {
       return NextResponse.json(
         { error: "Account creation is currently disabled." },
         { status: 403 },
@@ -35,7 +35,7 @@ export async function POST(request: Request) {
     }
 
     const parsed = signupRequestSchema.parse(await request.json().catch(() => ({})));
-    if (parsed.accessCode !== env.judgeAccessCode) {
+    if (parsed.accessCode !== env.previewAccessCode) {
       return NextResponse.json(
         { error: "That access code is invalid." },
         { status: 403 },
@@ -47,7 +47,7 @@ export async function POST(request: Request) {
       password: parsed.password,
       email_confirm: true,
       app_metadata: {
-        judge_access: true,
+        preview_access: true,
       },
     });
 

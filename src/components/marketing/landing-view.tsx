@@ -187,7 +187,7 @@ function HeroContent({ authenticated }: { authenticated: boolean }) {
               animate={{ y: 0 }}
               transition={{ ...spring, delay: 0.15 }}
             >
-              AI makes the calls.
+              Switchboard runs the outreach.
               <br />
               <span style={{ color: "var(--accent)" }}>You</span> make the final one.
             </motion.h1>

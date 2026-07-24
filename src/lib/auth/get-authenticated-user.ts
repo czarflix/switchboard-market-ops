@@ -1,6 +1,6 @@
 import "server-only";
 
-import { ensureJudgeAccess } from "@/lib/auth/judge-access";
+import { ensurePreviewAccess } from "@/lib/auth/preview-access";
 import { createClient } from "@/lib/supabase/server";
 
 export async function getAuthenticatedUserOrThrow() {
@@ -8,7 +8,7 @@ export async function getAuthenticatedUserOrThrow() {
   const {
     data: { user },
   } = await supabase.auth.getUser();
-  const authorizedUser = await ensureJudgeAccess(user);
+  const authorizedUser = await ensurePreviewAccess(user);
 
   if (!authorizedUser) {
     throw new Error("Unauthorized");

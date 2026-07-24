@@ -2,11 +2,11 @@
 
 One brief in. One winner out.
 
-Switchboard is an AI sourcing desk for messy local vendor decisions. It captures a requirement, gathers live market evidence, organizes outreach, and returns one next-step-ready recommendation instead of another pile of tabs, notes, and follow-ups.
+Switchboard is a sourcing desk for messy local vendor decisions. It captures a requirement, gathers live market evidence, organizes outreach, and returns one next-step-ready recommendation instead of another pile of tabs, notes, and follow-ups.
 
 The point is not to add voice to a simple lookup. Voice matters where the brief is messy and where real people still need to be called. Firecrawl matters where pricing, availability, and contact signal are fragmented across the web. The workflow ends in a decision, not an answer.
 
-Switchboard includes a built-in voice copilot: it runs the intake live, speaks key handoff updates, and narrates the outreach board as the workflow progresses.
+Switchboard includes built-in voice intake: it captures the brief live, speaks key handoff updates, and narrates the outreach board as the workflow progresses.
 
 The current demo uses banquet hall sourcing in Gurgaon, but the workflow is broader:
 
@@ -39,7 +39,7 @@ The current demo uses banquet hall sourcing in Gurgaon, but the workflow is broa
 
 ## Hosted Demo and Self-Hosted Telephony
 
-The hosted demo is a gated review build. It does not place live outbound calls. In the hosted build, the `/calls` stage is a policy-safe simulation that shows the outreach board, narrated transcript lanes, and downstream decision flow without enabling public dialing.
+The hosted demo does not place live outbound calls. Its `/calls` stage runs a simulation that shows the outreach board, narrated transcript lanes, and downstream decision flow; outbound dialing is disabled.
 
 Live telephony is only for local, private, or self-hosted telephony-capable deployments with approved provider credentials, explicit operator control, and `LIVE_CALLS_ENABLED=true`. It should remain off by default.
 
@@ -47,9 +47,11 @@ Do not use live telephony without permission. Follow Twilio policy, consent and 
 
 ## Live Demo
 
-- Demo: [https://switchboard.czarflix.me](https://switchboard.czarflix.me)
-- The hosted demo is a gated review build with the calls stage kept policy-safe.
+- Demo: [https://switchboard-research.vercel.app](https://switchboard-research.vercel.app)
+- The hosted demo runs a simulated calls stage; outbound calling is disabled.
+
 Access is configured through private deployment environment settings; no access code is published here.
+
 ## Local Development
 
 ```bash

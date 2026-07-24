@@ -1,7 +1,7 @@
 import { redirect } from "next/navigation";
 
 import { LoginView } from "@/components/marketing/login-view";
-import { ensureJudgeAccess } from "@/lib/auth/judge-access";
+import { ensurePreviewAccess } from "@/lib/auth/preview-access";
 import { getServerEnv } from "@/lib/env";
 import { createClient } from "@/lib/supabase/server";
 
@@ -10,8 +10,8 @@ export default async function LoginPage() {
   const {
     data: { user },
   } = await supabase.auth.getUser();
-  const { judgeSignupEnabled, judgeAccessRepoMessage, judgeAccessRepoUrl } = getServerEnv();
-  const authorizedUser = await ensureJudgeAccess(user);
+  const { previewSignupEnabled, previewAccessRepoMessage, previewAccessRepoUrl } = getServerEnv();
+  const authorizedUser = await ensurePreviewAccess(user);
 
   if (authorizedUser) {
     redirect("/research");
@@ -19,11 +19,11 @@ export default async function LoginPage() {
 
   return (
     <LoginView
-      signupEnabled={judgeSignupEnabled}
+      signupEnabled={previewSignupEnabled}
       initialError={user ? "This account is not authorized for this private preview." : ""}
       forceSignOutUnauthorized={Boolean(user)}
-      judgeAccessRepoMessage={judgeAccessRepoMessage}
-      judgeAccessRepoUrl={judgeAccessRepoUrl}
+      previewAccessRepoMessage={previewAccessRepoMessage}
+      previewAccessRepoUrl={previewAccessRepoUrl}
     />
   );
 }
